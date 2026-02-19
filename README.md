@@ -91,6 +91,7 @@ iot/
 cd backend
 pip install -r requirements.txt
 uvicorn main:app --reload
+```
 
 Backend runs at:
 http://127.0.0.1:8000
@@ -101,68 +102,83 @@ http://127.0.0.1:8000
 cd frontend
 npm install
 npm start
+```
 
 Frontend runs at:
 http://localhost:3000
 
-3. Test API (Swagger)
+## 3. Test API (Swagger)
 
 Go to: http://127.0.0.1:8000/docs
 
 Use:
-/sensor → send data
-/dashboard → view history
-/digital_twin → latest state
+- /sensor → send data
+- /dashboard → view history
+- /digital_twin → latest state
 
-🔁 Data Flow
+---
+
+## 🔁 Data Flow
 
 Sensor/Simulator sends data → /sensor
 
-Backend:
-Stores in DB
-Predicts risk
+## Backend:
+- Stores in DB
+- Predicts risk
 
-Frontend:
-Fetches /digital_twin (live)
-Fetches /dashboard (history)
-UI updates automatically
+## Frontend:
+- Fetches /digital_twin (live)
+- Fetches /dashboard (history)
+- UI updates automatically
 
-🚨 Risk Detection Logic
+---
 
-Based on:
-Heart rate
-Temperature
-Motion
-Gesture spikes
+## 🚨 Risk Detection Logic
 
-Rules:
-Normal → safe state
-Emergency → triggers alert + vibration
+## Based on:
+- Heart rate
+- Temperature
+- Motion
+- Gesture spikes
 
-📊 Digital Twin
+## Rules:
+- Normal → safe state
+- Emergency → triggers alert + vibration
+
+---
+
+## 📊 Digital Twin
 
 A real-time virtual representation of the user’s state:
-Heart Rate
-Temperature
-Motion
-Risk Level
-Location
+- Heart Rate
+- Temperature
+- Motion
+- Risk Level
+- Location
 
 Auto-refresh every few seconds.
 
-🗺️ Live Tracking
+---
 
-Displays user location on map
-Updates dynamically using backend data
+## 🗺️ Live Tracking
 
-📌 Future Scope
+- Displays user location on map
+- Updates dynamically using backend data
 
-Mobile app integration
-SMS / call alerts
-Cloud deployment
-AI-based anomaly detection
-Wearable device integration
+---
 
-📜 License
+## 📌 Future Scope
+
+- Mobile app integration
+- SMS / call alerts
+- Cloud deployment
+- AI-based anomaly detection
+- Wearable device integration
+
+---
+
+## 📜 License
 
 This project is for academic and research purposes.
+
+---
