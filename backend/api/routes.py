@@ -12,11 +12,11 @@ def dashboard():
 
 @router.post("/sensor")
 def receive_sensor(data: dict):
-    # print("Incoming data:", data) # logs
+    print("Incoming data:", data) # logs
     risk = predict_risk(data)
 
-    # print("Predicted risk:", risk)
-    # print("Location:", data.get("lat"), data.get("lon"))
+    print("Predicted risk:", risk)
+    print("Location:", data.get("lat"), data.get("lon"))
     
     save_to_db(data, risk)   
 
