@@ -30,7 +30,7 @@ This project simulates and implements a **women safety system** that:
 
 ### IoT (Planned)
 - ESP32
-- Sensors (Heart Rate, Temperature, Accelerometer)
+- Sensors (Heart Rate, Gyroscope, Microphone)
 - GPS Module
 - Buzzer/Vibration Motor
 
